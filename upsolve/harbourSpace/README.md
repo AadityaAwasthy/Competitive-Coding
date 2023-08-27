@@ -1,7 +1,7 @@
-#HarbourSpace (Div1 + Div2)
+# HarbourSpace (Div1 + Div2)
 
-##Problem C - Divisor Chain
-###TLDR
+## Problem C - Divisor Chain
+### TLDR
 
 Number theory involved
 
