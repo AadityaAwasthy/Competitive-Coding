@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define iterate(i,n) for(int i = 0 ; i < n ; i++)
+#define INF 1e9
+#define MOD 1000000007
+#define MAXN 1000001
+#define endl "\n"
+#define deb(x) cout << #x << " = " << x << "\n";
+#define arrout(a) for(auto itr : a) cout << itr << " "
+#define arrin(a) for(auto& itr : a) cin >> itr;
+typedef long long ll;
+
+int solve(void)
+{
+    int n, x;
+    cin >> n >> x;
+
+    vector<int> arr(n);
+    iterate(i,n) cin >> arr[i];
+
+    sort (arr.begin() , arr.end());
+    
+    int ans = 0;
+    int l = 0, r = n - 1;
+
+    while(l <= r) {
+        if(arr[l] + arr[r] <= x) {
+            ans++;
+            l++;
+            r--;
+        } else if(arr[l] + arr[r] > x) {
+            ans++;
+            r--;
+        }
+    }
+
+    cout << ans;
+
+    return 0;
+}
+
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    t = 1;
+
+    while(t-- > 0)
+    {
+        solve();
+        cout << endl;
+    }
+
+    return 0;
+}
